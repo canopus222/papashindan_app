@@ -1,0 +1,54 @@
+<%= form_tag(posts_path, method: :post, data: { turbo: false }) do %>
+  <h3>Q.1 子供と電車に乗りました。次の駅で降りる予定ですが子供が座りたいといっています。座らせますか</h3>
+  <label>
+    <%= radio_button_tag :question1, 1 %> はい
+    <p>たとえ1駅でもわが子の喜ぶ顔が見れ、静かにしてくれるのなら。</p>
+  </label>
+  <label>
+    <%= radio_button_tag :question1, 0 %> いいえ
+    <p>はっ？次でおりんだよ。1駅位すぐだぞ。</p>
+  </label>
+  
+  <h3>Q.2 子供にご飯を食べさせることになりました。しかし、食べ物で遊んでばかり。どうにかしますか</h3>
+  <label>
+    <%= radio_button_tag :question2, 1 %> はい
+    <p>おいしそうに食べれば食べてくれる！わが子よパパに続け！</p>
+  </label>
+  <label>
+    <%= radio_button_tag :question2, 0 %> いいえ
+    <p>ママでないと食べないんでしょ。だったら自分で勝手におもちゃで遊んでくれ。</p>
+  </label>
+  
+  <h3>Q.3 子供の寝かしつけの時、「ままがいい」とギャン泣きしています。それでも一緒に寝ますか</h3>
+  <label>
+    <%= radio_button_tag :question3, 1 %> はい
+    <p>すぐに寝ないことは百も承知。絵本を読んだり、少し疲れるまで遊ばせてあげることでパパが寝かしつけるぞ！</p>
+  </label>
+  <label>
+    <%= radio_button_tag :question3, 0 %> いいえ
+    <p>ままー、おねがーい。ご飯は食べさせたんだからいいよねー。</p>
+  </label>
+  
+  <h3>Q.4 子供が遊び場で遊んでいます。一緒に遊びますか</h3>
+  <label>
+    <%= radio_button_tag :question4, 1 %> はい
+    <p>ただ遊ぶだけじゃなくて「見守る」という観点からも目を離さないぞ！！</p>
+  </label>
+  <label>
+    <%= radio_button_tag :question4, 0 %> いいえ
+    <p>さーてと、スマホゲームでもしますか。おっ100連ガチャ忘れるとこだった。</p>
+  </label>
+  
+  <h3>Q.5 お嫁さんは1か月に1・2回は休日子供を連れ実家に帰ります。あなたもついていきますか</h3>
+  <label>
+    <%= radio_button_tag :question5, 1 %> はい
+    <p>実家もいいけど、おれは父親になるんだ！ママはついてくるなというかもしれないが、実家にお邪魔して子育ての勉強をお義母さんから学ぶぞ！</p>
+  </label>
+  <label>
+    <%= radio_button_tag :question5, 0 %> いいえ
+    <p>いえーい！しばらく見れてなかったサッカーの試合でもリアルタイムで見ますか。結局実家がいいんだろう。</p>
+  </label>
+  
+  <%= submit_tag '診断する' %>
+<% end %>
+  

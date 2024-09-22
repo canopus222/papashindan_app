@@ -11,4 +11,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  # トップページ
+  root 'tops#index'
+
+  # 診断フォームを表示するルート
+  get 'posts/new', to: 'posts#new', as: :new_post
+
+  # 診断結果を表示するためのルート
+  post 'posts', to: 'posts#create', as: :posts
+
+  # 診断結果ページ
+  get 'posts', to: 'posts#index', as: :result_posts
 end
