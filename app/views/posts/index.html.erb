@@ -1,11 +1,18 @@
-<h1>診断結果</h1>
+<main class="flex flex-col items-center min-h-screen">
+  <!-- コンテナ（背景の上に配置する） -->
+  <div class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg max-w-lg text-center">
+    <h1 class="text-2xl font-bold mb-6">診断結果</h1>
 
-<% @posts.each do |t| %>
-  <% if t.number.to_i == @result %> <!-- 結果が「はい」の数と一致するものを表示 -->
-    <div class="result">
-      <h3>あなたは <%= t.content %> です！</h3>
-      <img src="<%= t.image %>" alt="<%= t.content %>の画像"> <!-- 画像を表示 -->
-      <p><%= t.description %></p> <!-- 詳細な説明を表示 -->
-    </div>
-  <% end %>
-<% end %>
+    <% @posts.each do |t| %>
+      <% if t.number.to_i == @result %> <!-- 結果が「はい」の数と一致するものを表示 -->
+        <div class="result">
+          <h3 class="text-xl font-semibold mt-4">あなたは <%= t.content %> です！</h3>
+          <!-- 画像を表示（高さ・幅を300に固定） -->
+          <img src="<%= t.image %>" alt="<%= t.content %>の画像" class="w-[300px] h-[300px] object-cover mx-auto my-6">
+          <!-- 詳細な説明を表示 -->
+          <p class="text-lg leading-relaxed"><%= t.description %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</main>
