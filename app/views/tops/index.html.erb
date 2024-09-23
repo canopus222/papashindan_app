@@ -1,3 +1,25 @@
-<h1>トップページ</h1>
+<main class="flex flex-col items-center min-h-screen">
+  <!-- コンテナ（背景の上に配置する） -->
+  <div class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg max-w-md text-center">
+    <!-- タイトル（P, S, Cのみ大きく表示） -->
+    <header class="my-8">
+      <h1 class="text-xl font-bold">
+        <span class="text-3xl">P</span>apa
+        <span class="text-3xl">S</span>kill
+        <span class="text-3xl">C</span>heck
+      </h1>
+      <!-- 説明文 -->
+      <p class="text-lg mt-4">あなたの父親度を客観的にみてみましょう</p>
+    </header>
 
-<%= link_to '診断を始める', new_post_path %>
+    <!-- 画像 -->
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-SCR-8BkZzikqGK1UPAbEs2_qG9M39fBVpqQJWU10qtyFXRu4GwCEAfN6y7396VF9CuWxpcNVzGpEodgtqJpcpW0CEayRjiBirKCEhsGprQmz9KnmCws3PpSJd7WMEsw_PtgnIOhnlIA/s800/father_burasagari.png" 
+         alt="父親のイメージ" 
+         class="w-[300px] h-[300px] mt-8 mx-auto">
+
+    <!-- ボタン -->
+    <div class="mt-6">
+      <%= link_to '診断を始める', new_post_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' %>
+    </div>
+  </div>
+</main>
