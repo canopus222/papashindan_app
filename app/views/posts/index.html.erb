@@ -11,6 +11,17 @@
           <img src="<%= t.image %>" alt="<%= t.content %>の画像" class="w-[300px] h-[300px] object-cover mx-auto my-6">
           <!-- 詳細な説明を表示 -->
           <p class="text-lg leading-relaxed"><%= t.description %></p>
+
+          <!-- シェアボタンとトップページに戻るボタン -->
+          <div class="mt-6 flex justify-center space-x-4">
+            <!-- シェアボタン -->
+            <%= link_to "https://twitter.com/intent/tweet?url=https://tkg-diagnosis.onrender.com&text=あなたは #{t.content} です！", target: '_blank', class: 'flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' do %>
+              <%= image_tag 'RiTwitterXFill.png', alt: 'Twitterシェアアイコン', class: 'w-6 h-6 mr-2' %> シェアする
+            <% end %>
+
+            <!-- トップページに戻るボタン -->
+            <%= link_to 'トップページに戻る', root_path, class: 'bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded' %>
+          </div>
         </div>
       <% end %>
     <% end %>
