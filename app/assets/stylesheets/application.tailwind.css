@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-image: url('/assets/PSC.png'); /* 画像のパス */
+  background-size: cover; /* 画像が画面全体をカバーするように */
+  background-repeat: no-repeat; /* 繰り返さない */
+}
